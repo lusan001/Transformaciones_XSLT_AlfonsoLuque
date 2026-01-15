@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="bebidas_1.xsl"?>
+<?xml-stylesheet type="text/xsl" href="bebidas_6.xsl"?>
+
 <menu>
     <bebida>
         <nombre>Café solo</nombre>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Transformacion 2 -->
+<!-- Crear una hoja XSL que muestre las bebidas en una tabla HTML con las columnas:
+
+Nombre
+
+Precio
+
+Tipo -->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html lang="es">
+            <head>
+                <meta charset="UTF-8"/>
+                <title>Tabla de Bebidas</title>
+            </head>
+            <body>
+                <h1>Tabla de Bebidas</h1>
+                <table border ="1">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Tipo</th>
+                    </tr>
+                    <xsl:for-each select="menu/bebida">
+                        <tr>
+                            <td><xsl:value-of select="nombre"/></td>
+                            <td><xsl:value-of select="precio"/></td>
+                            <td><xsl:value-of select="tipo"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
